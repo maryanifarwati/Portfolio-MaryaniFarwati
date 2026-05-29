@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maryani Portfolio</title>
+<title>Maryani Farwati | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
@@ -19,148 +23,447 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f5f5;
-color:#222;
+background:#f5f7fb;
+color:#1e293b;
+line-height:1.7;
 }
 
-section{
-padding:100px 10%;
+a{
+text-decoration:none;
 }
 
-.hero{
-min-height:100vh;
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#0f172a;
+padding:18px 0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container{
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:#0f172a;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
 color:white;
-flex-wrap:wrap;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#38bdf8;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+display:flex;
+align-items:center;
+padding-top:100px;
+color:white;
+}
+
+.hero-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+align-items:center;
 gap:50px;
 }
 
-.hero-text{
-flex:1;
+.hero-text h3{
+font-size:22px;
+font-weight:500;
+color:#cbd5e1;
 }
 
 .hero-text h1{
-font-size:60px;
+font-size:65px;
+line-height:1.1;
 margin:20px 0;
 }
 
 .hero-text p{
-line-height:1.8;
-margin-bottom:30px;
+font-size:18px;
+color:#e2e8f0;
+margin-bottom:35px;
+}
+
+.btn-group{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
 }
 
 .btn{
-display:inline-block;
 padding:14px 28px;
+border-radius:12px;
+font-weight:600;
+transition:0.3s;
+display:inline-block;
+}
+
+.btn-primary{
 background:white;
 color:#0f172a;
-text-decoration:none;
-border-radius:10px;
-font-weight:600;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:#0f172a;
+}
+
+.hero-image{
+text-align:center;
 }
 
 .hero-image img{
-width:320px;
-height:320px;
+width:340px;
+height:340px;
 border-radius:50%;
 object-fit:cover;
-border:6px solid rgba(255,255,255,0.2);
+border:8px solid rgba(255,255,255,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
-.title{
+/* SECTION */
+section{
+padding:100px 0;
+}
+
+.section-title{
 text-align:center;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
-.title h2{
-font-size:40px;
+.section-title h2{
+font-size:42px;
+margin-bottom:10px;
+color:#0f172a;
 }
 
+.section-title p{
+color:#64748b;
+}
+
+/* ABOUT */
 .about-box{
 background:white;
-padding:40px;
-border-radius:20px;
-line-height:1.8;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-text-align:center;
+padding:45px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
 }
 
-.skill-box{
+.about-box p{
+font-size:17px;
+color:#475569;
+}
+
+/* SKILLS */
+.skills-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
-.card{
+.skill-card{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+transition:0.3s;
 }
 
-.project-container{
+.skill-card:hover{
+transform:translateY(-8px);
+}
+
+.skill-card i{
+font-size:35px;
+margin-bottom:15px;
+color:#2563eb;
+}
+
+.skill-card h3{
+font-size:18px;
+}
+
+/* PROJECT */
+.project-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
 
 .project-card{
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+transition:0.3s;
 }
 
-.project-card h3{
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-image img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-content{
+padding:30px;
+}
+
+.project-content h3{
+font-size:24px;
+margin-bottom:10px;
+}
+
+.project-role{
+color:#2563eb;
+font-weight:600;
 margin-bottom:15px;
 }
 
-.exp-card{
+.project-content p{
+color:#475569;
+margin-bottom:20px;
+}
+
+.tech{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:25px;
+}
+
+.tech span{
+background:#dbeafe;
+color:#1e3a8a;
+padding:8px 14px;
+border-radius:30px;
+font-size:13px;
+font-weight:600;
+}
+
+.project-btn{
+display:inline-block;
+padding:12px 22px;
+background:#0f172a;
+color:white;
+border-radius:10px;
+font-weight:600;
+}
+
+/* EXPERIENCE */
+.timeline{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.timeline-item{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.timeline-item h3{
+font-size:25px;
+margin-bottom:5px;
+}
+
+.timeline-item h4{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.timeline-item ul{
+padding-left:20px;
+color:#475569;
+}
+
+/* CERTIFICATE */
+.cert-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.cert-card{
 background:white;
 padding:30px;
 border-radius:20px;
-margin-top:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
 }
 
+.cert-card i{
+font-size:28px;
+color:#f59e0b;
+margin-bottom:15px;
+}
+
+.cert-card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+/* PUBLICATION */
+.pub-grid{
+display:grid;
+gap:25px;
+}
+
+.pub-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.pub-card h3{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.pub-card span{
+color:#2563eb;
+font-weight:600;
+}
+
+/* CONTACT */
 .contact{
-background:#0f172a;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
 color:white;
 text-align:center;
 }
 
-.contact p{
-margin-top:15px;
+.contact h2{
+font-size:42px;
+margin-bottom:15px;
 }
 
+.contact p{
+color:#e2e8f0;
+margin-bottom:30px;
+}
+
+.contact-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.contact-item{
+background:rgba(255,255,255,0.1);
+padding:18px 25px;
+border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+color:#cbd5e1;
+text-align:center;
+padding:20px;
+}
+
+/* RESPONSIVE */
 @media(max-width:768px){
 
+.menu{
+display:none;
+}
+
 .hero{
-justify-content:center;
 text-align:center;
 }
 
 .hero-text h1{
-font-size:40px;
+font-size:42px;
 }
 
 .hero-image img{
-width:220px;
-height:220px;
+width:240px;
+height:240px;
+}
+
+.section-title h2{
+font-size:34px;
 }
 
 }
 
 </style>
-
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+<nav>
+
+<div class="container nav-container">
+
+<div class="logo">
+Maryani.
+</div>
+
+<div class="menu">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#certificate">Certificate</a>
+<a href="#publication">Publication</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
 <section class="hero">
+
+<div class="container hero-content">
 
 <div class="hero-text">
 
@@ -171,12 +474,21 @@ height:220px;
 <p>
 Fresh Graduate Sistem Informasi dengan pengalaman
 dalam pengembangan website, UI/UX Design,
-dan sistem informasi berbasis web.
+sistem informasi berbasis web, dan penelitian
+teknologi informasi.
 </p>
 
-<a href="#project" class="btn">
-Lihat Project
+<div class="btn-group">
+
+<a href="#projects" class="btn btn-primary">
+View Projects
 </a>
+
+<a href="CV.pdf" class="btn btn-outline">
+Download CV
+</a>
+
+</div>
 
 </div>
 
@@ -186,87 +498,240 @@ Lihat Project
 
 </div>
 
+</div>
+
 </section>
 
-<section>
+<!-- ABOUT -->
+<section id="about">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 <h2>About Me</h2>
+<p>Tentang Saya</p>
 </div>
 
 <div class="about-box">
 
 <p>
-Fresh Graduate Sistem Informasi Universitas Bina Darma
-dengan pengalaman dalam pengembangan website,
+Saya merupakan Fresh Graduate Program Studi Sistem Informasi
+Universitas Bina Darma dengan IPK 3.84/4.00.
+Memiliki pengalaman dalam pengembangan website,
 UI/UX Design, sistem informasi berbasis web,
-dan penelitian teknologi informasi.
+serta penelitian teknologi informasi.
+Terbiasa bekerja secara individu maupun tim,
+adaptif, komunikatif, dan memiliki kemampuan
+problem solving yang baik.
 </p>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
+<!-- SKILLS -->
+<section id="skills">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 <h2>Technical Skills</h2>
+<p>Kemampuan Teknis</p>
 </div>
 
-<div class="skill-box">
+<div class="skills-grid">
 
-<div class="card">PHP Native</div>
-<div class="card">HTML</div>
-<div class="card">CSS</div>
-<div class="card">JavaScript</div>
-<div class="card">Bootstrap</div>
-<div class="card">MySQL</div>
-<div class="card">Leaflet.js</div>
-<div class="card">Google Maps API</div>
-<div class="card">Figma</div>
+<div class="skill-card">
+<i class="fa-brands fa-html5"></i>
+<h3>HTML</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-css3-alt"></i>
+<h3>CSS</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-js"></i>
+<h3>JavaScript</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-php"></i>
+<h3>PHP Native</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-database"></i>
+<h3>MySQL</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-bootstrap"></i>
+<h3>Bootstrap</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-solid fa-map-location-dot"></i>
+<h3>Leaflet.js</h3>
+</div>
+
+<div class="skill-card">
+<i class="fa-brands fa-figma"></i>
+<h3>Figma</h3>
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section id="project">
+<!-- PROJECT -->
+<section id="projects">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 <h2>Projects</h2>
+<p>Project Portfolio</p>
 </div>
 
-<div class="project-container">
+<div class="project-grid">
 
+<!-- PROJECT 1 -->
 <div class="project-card">
 
-<h3>Website Interaktif Naskah Ulu</h3>
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
+
+<h3>Aksaraulu.id</h3>
+
+<div class="project-role">
+Support Team & Front-End Developer
+</div>
 
 <p>
-Website pemetaan artefak berbasis
-Leaflet.js dan Google Maps API.
+Berkontribusi dalam pengembangan website Aksaraulu.id
+berbasis web interaktif untuk visualisasi lokasi
+penemuan Naskah Ulu Sumatera Selatan.
 </p>
+
+<div class="tech">
+<span>PHP</span>
+<span>Bootstrap</span>
+<span>Leaflet.js</span>
+<span>JavaScript</span>
+</div>
+
+<a href="https://aksaraulusumsel.id" target="_blank" class="project-btn">
+View Website
+</a>
 
 </div>
 
+</div>
+
+<!-- PROJECT 2 -->
 <div class="project-card">
 
-<h3>Sistem Informasi Ketarunaan</h3>
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
+
+<h3>Website Interaktif Peta Naskah Ulu</h3>
+
+<div class="project-role">
+Research Project | Front-End Developer
+</div>
 
 <p>
-Sistem informasi pengelolaan data
-taruna dan alumni.
+Platform visualisasi spasial berbasis web untuk
+memetakan distribusi geografis lokasi penemuan
+Naskah Ulu Sumatera Selatan.
 </p>
+
+<div class="tech">
+<span>Leaflet.js</span>
+<span>Google Maps API</span>
+<span>PHP</span>
+<span>MySQL</span>
+</div>
 
 </div>
 
+</div>
+
+<!-- PROJECT 3 -->
 <div class="project-card">
+
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
+
+<h3>Sistem Informasi Ketarunaan & Alumni</h3>
+
+<div class="project-role">
+Web Developer
+</div>
+
+<p>
+Sistem informasi administrasi ketarunaan dan alumni
+berbasis web pada lingkungan Poltektrans SDP Palembang.
+</p>
+
+<div class="tech">
+<span>PHP</span>
+<span>Bootstrap</span>
+<span>MySQL</span>
+</div>
+
+<a href="#" class="project-btn">
+View Website
+</a>
+
+</div>
+
+</div>
+
+<!-- PROJECT 4 -->
+<div class="project-card">
+
+<div class="project-image">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop">
+</div>
+
+<div class="project-content">
 
 <h3>Website Company Profile</h3>
 
+<div class="project-role">
+Front-End Developer
+</div>
+
 <p>
-Website company profile untuk
-lembaga masyarakat sehat Sriwijaya.
+Website company profile untuk mendukung penyampaian
+informasi digital Lembaga Masyarakat Sehat Sriwijaya.
 </p>
+
+<div class="tech">
+<span>PHP</span>
+<span>Bootstrap</span>
+<span>MySQL</span>
+</div>
+
+</div>
+
+</div>
 
 </div>
 
@@ -274,47 +739,230 @@ lembaga masyarakat sehat Sriwijaya.
 
 </section>
 
-<section>
+<!-- EXPERIENCE -->
+<section id="experience">
 
-<div class="title">
+<div class="container">
+
+<div class="section-title">
 <h2>Experience</h2>
+<p>Pengalaman</p>
 </div>
 
-<div class="exp-card">
+<div class="timeline">
+
+<div class="timeline-item">
 
 <h3>MAGANGHUB Kemnaker</h3>
 
-<p>
-Mengembangkan sistem informasi
-ketarunaan dan alumni berbasis web.
-</p>
+<h4>
+Pengolah Data dan Informasi Ketarunaan
+| Poltektrans SDP Palembang
+</h4>
+
+<ul>
+<li>Mengembangkan sistem informasi ketarunaan dan alumni berbasis web.</li>
+<li>Membantu pengembangan fitur tracer study dan sistem informasi PKL.</li>
+<li>Mengelola data taruna dan alumni pada sistem digital.</li>
+<li>Mengembangkan antarmuka website menggunakan PHP dan Bootstrap.</li>
+</ul>
 
 </div>
 
-<div class="exp-card">
+<div class="timeline-item">
 
-<h3>MBKM Riset Penelitian</h3>
+<h3>Intelligent System Research Group</h3>
+
+<h4>
+MBKM Riset Penelitian | Front-End Developer
+</h4>
+
+<ul>
+<li>Mengembangkan platform visualisasi spasial berbasis web.</li>
+<li>Implementasi antarmuka pengguna (UI).</li>
+<li>Integrasi Leaflet.js dan Google Maps API.</li>
+<li>Berkontribusi dalam pengembangan website aksaraulusumsel.id.</li>
+</ul>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>MSIB Batch 6</h3>
+
+<h4>
+Divisi IT Database | Bakrie Center Foundation
+</h4>
+
+<ul>
+<li>Penempatan pada Lembaga Masyarakat Sehat Sriwijaya.</li>
+<li>Mengembangkan website company profile lembaga.</li>
+<li>Membantu pengelolaan database dan sistem berbasis web.</li>
+<li>Mendukung pengembangan sistem informasi digital.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATE -->
+<section id="certificate">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Certificates</h2>
+<p>Sertifikasi</p>
+</div>
+
+<div class="cert-grid">
+
+<div class="cert-card">
+<i class="fa-solid fa-award"></i>
+<h3>Certificate in Business Intelligence Associate</h3>
+<p>Logical Operations | 2025</p>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-award"></i>
+<h3>Project Integration Methodology of Excellence</h3>
+<p>Logical Operations | 2025</p>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-award"></i>
+<h3>Cisco Certified Network Associate (CCNA)</h3>
+<p>Cisco Networking Academy | 2024</p>
+</div>
+
+<div class="cert-card">
+<i class="fa-solid fa-award"></i>
+<h3>Desktop Office Training</h3>
+<p>2025</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Research & Publication</h2>
+<p>Publikasi Ilmiah</p>
+</div>
+
+<div class="pub-grid">
+
+<div class="pub-card">
+
+<h3>
+Mnemonic <span>| Sinta 4 | 2025</span>
+</h3>
 
 <p>
-Mengembangkan website peta interaktif
+Visualisasi Spasial untuk Website Interaktif
 Naskah Ulu Sumatera Selatan.
 </p>
 
 </div>
 
-</section>
+<div class="pub-card">
 
-<section class="contact">
+<h3>
+JURSIMA <span>| Sinta 5 | 2025</span>
+</h3>
 
-<div class="title">
-<h2>Contact</h2>
+<p>
+Website Interaktif Peta Naskah Ulu Sumatera Selatan.
+</p>
+
 </div>
 
-<p>Email: maryanifarwati@gmail.com</p>
-<p>Phone: +62 82280377685</p>
-<p>Palembang, Indonesia</p>
+<div class="pub-card">
+
+<h3>
+JURSIMA <span>| Sinta 5 | 2023</span>
+</h3>
+
+<p>
+Analisa Pengaruh Teknologi Artificial Intelligence (AI)
+dalam Kehidupan Sehari-hari.
+</p>
+
+</div>
+
+<div class="pub-card">
+
+<h3>
+JEBIMAN <span>| 2023</span>
+</h3>
+
+<p>
+Perancangan Sistem Informasi Penjualan Berbasis Web
+pada Toko Fun's Bouquet Ballon.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>Contact Me</h2>
+
+<p>
+Terima kasih telah melihat portfolio saya.
+Saya terbuka untuk peluang kerja dan kolaborasi project digital.
+</p>
+
+<div class="contact-box">
+
+<div class="contact-item">
+<i class="fa-solid fa-envelope"></i>
+maryanifarwati@gmail.com
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-phone"></i>
++62 822-8037-7685
+</div>
+
+<div class="contact-item">
+<i class="fa-solid fa-location-dot"></i>
+Palembang, Indonesia
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 Maryani Farwati | Portfolio Website
+</p>
+
+</footer>
 
 </body>
 </html>
