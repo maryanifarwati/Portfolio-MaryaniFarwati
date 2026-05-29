@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maryani Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f5;
+color:#222;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0f172a;
+color:white;
+flex-wrap:wrap;
+gap:50px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:60px;
+margin:20px 0;
+}
+
+.hero-text p{
+line-height:1.8;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+background:white;
+color:#0f172a;
+text-decoration:none;
+border-radius:10px;
+font-weight:600;
+}
+
+.hero-image img{
+width:320px;
+height:320px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid rgba(255,255,255,0.2);
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:40px;
+}
+
+.about-box{
+background:white;
+padding:40px;
+border-radius:20px;
+line-height:1.8;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.skill-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.project-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.project-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.project-card h3{
+margin-bottom:15px;
+}
+
+.exp-card{
+background:white;
+padding:30px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact{
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+.contact p{
+margin-top:15px;
+}
+
+@media(max-width:768px){
+
+.hero{
+justify-content:center;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero-image img{
+width:220px;
+height:220px;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h3>Hello, I'm</h3>
+
+<h1>Maryani Farwati</h1>
+
+<p>
+Fresh Graduate Sistem Informasi dengan pengalaman
+dalam pengembangan website, UI/UX Design,
+dan sistem informasi berbasis web.
+</p>
+
+<a href="#project" class="btn">
+Lihat Project
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://i.imgur.com/6VBx3io.jpeg">
+
+</div>
+
+</section>
+
+<section>
+
+<div class="title">
+<h2>About Me</h2>
+</div>
+
+<div class="about-box">
+
+<p>
+Fresh Graduate Sistem Informasi Universitas Bina Darma
+dengan pengalaman dalam pengembangan website,
+UI/UX Design, sistem informasi berbasis web,
+dan penelitian teknologi informasi.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="title">
+<h2>Technical Skills</h2>
+</div>
+
+<div class="skill-box">
+
+<div class="card">PHP Native</div>
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">Bootstrap</div>
+<div class="card">MySQL</div>
+<div class="card">Leaflet.js</div>
+<div class="card">Google Maps API</div>
+<div class="card">Figma</div>
+
+</div>
+
+</section>
+
+<section id="project">
+
+<div class="title">
+<h2>Projects</h2>
+</div>
+
+<div class="project-container">
+
+<div class="project-card">
+
+<h3>Website Interaktif Naskah Ulu</h3>
+
+<p>
+Website pemetaan artefak berbasis
+Leaflet.js dan Google Maps API.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Sistem Informasi Ketarunaan</h3>
+
+<p>
+Sistem informasi pengelolaan data
+taruna dan alumni.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Website Company Profile</h3>
+
+<p>
+Website company profile untuk
+lembaga masyarakat sehat Sriwijaya.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="title">
+<h2>Experience</h2>
+</div>
+
+<div class="exp-card">
+
+<h3>MAGANGHUB Kemnaker</h3>
+
+<p>
+Mengembangkan sistem informasi
+ketarunaan dan alumni berbasis web.
+</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>MBKM Riset Penelitian</h3>
+
+<p>
+Mengembangkan website peta interaktif
+Naskah Ulu Sumatera Selatan.
+</p>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<div class="title">
+<h2>Contact</h2>
+</div>
+
+<p>Email: maryanifarwati@gmail.com</p>
+<p>Phone: +62 82280377685</p>
+<p>Palembang, Indonesia</p>
+
+</section>
+
+</body>
+</html>
